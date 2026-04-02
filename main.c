@@ -21,7 +21,7 @@ void init(int i ,int j, int k, int n, int m, int x, int y, int** mine, int num_m
 
 int main() {
 
-//Dhlwsh pinaka kai aparaititwn metablhtwn
+//Δήλωση πίνακα αποθήκευσης, διαστάσεων, μετρητών και επιλογών
 
     int **mine, m, n, i, j, k, max_n, max_m, num_mines, choice, x,y, unopened_counter = 0, count = 0;
     char ch[50];
@@ -61,7 +61,7 @@ int main() {
         }
     }
 
-    //epilogh dyskolias
+    //Επιλογή δυσκολίας
 
     printf("Select difficulty\n1. Easy (Mine density is 10%)\n2. Medium (Mine density is 15%)\n3. Hard (Mine density is 20%)\n4. Impossible (Mine density is 25%)\nEnter choice: ");
     scanf("%d", &choice);
@@ -191,7 +191,7 @@ int main() {
 }
 
 void init(int i ,int j, int k, int n, int m, int x, int y, int** mine, int num_mines, int choice, char ch[50]){
-    //arxikopoihsh pinaka apothikeyshs
+    //Αρχικοποίηση πίνακα 
     switch(choice){
         case 1:
             num_mines = (int) (n * m * 0.10);
@@ -207,7 +207,7 @@ void init(int i ,int j, int k, int n, int m, int x, int y, int** mine, int num_m
             break;
     }
 
-    //topothetisi narkwn
+    //Τοποθέτηση ναρκών
 
     for(k = 0; k<num_mines; k++) {
         i = rand() % n;
@@ -234,7 +234,7 @@ void init(int i ,int j, int k, int n, int m, int x, int y, int** mine, int num_m
         }
     }
 
-    //enarksi ypodoxhs apo to xrhsth
+    //Έναρξη υποδοχής από τον χρήστη
 
     printf("Start the game by opening a tile. Please type 'open(x,y)', where x is the line number and y is the row number.\n");
     getchar();
@@ -278,7 +278,7 @@ void init(int i ,int j, int k, int n, int m, int x, int y, int** mine, int num_m
     }
 
 
-// markarisma geitonikwn tetragwnwn
+// Μαρκάρισμα γειτωνικών τετραγώνων
 
     for(i = 0; i<n; i++) {
         for (j = 0; j < m; j++) {
@@ -335,7 +335,7 @@ void init(int i ,int j, int k, int n, int m, int x, int y, int** mine, int num_m
     }
 
 
-    //swsth topothetisi noumerwn gyrw apo tis geitonikes narkes
+    //Σωστή τοποθέτηση αριθμών γειτωνικών ναρκών
 
     for(i = 0; i<n; i++) {
         for (j = 0; j < m; j++) {
@@ -398,7 +398,7 @@ void init(int i ,int j, int k, int n, int m, int x, int y, int** mine, int num_m
 }
 
 
-//ektypwsh tablo
+//Εκτύπωση ταμπλό
     void printmine(int** mine, int m, int n){
         int i,j;
         printf("   ");
